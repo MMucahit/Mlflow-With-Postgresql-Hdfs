@@ -1,0 +1,4 @@
+# ignore postgres values
+
+/local_pgdata
+/pgadmin-data

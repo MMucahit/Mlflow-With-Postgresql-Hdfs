@@ -1,0 +1,9 @@
+sudo docker compose up
+sudo docker compose down
+
+mlflow server     
+	--backend-store-uri postgresql+psycopg2://root:root@{Container_İp}:5432/postgres     
+	--default-artifact-root hdfs://localhost:9000/Models
+
+
+
