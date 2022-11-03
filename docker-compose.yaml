@@ -16,6 +16,25 @@ services:
       - postgres
     restart: unless-stopped
   
+  mlflow:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mlflowserver
+    container_name: mlflowserver
+    ports:
+      - "5000:5000"
+    networks:
+      - postgres
+    expose:
+      - "5000"
+    environment:
+      - MLFOW_BACKEND_STORE_URI=postgresql+psycopg2://root:root@postgres:5432/postgres  
+      - DEFAULT_ARTIFACT_ROOT=hdfs://localhost:9000/Models 
+    depends_on:
+      - postgres
+
   pgadmin:
     container_name: pgadmin_container
     image: dpage/pgadmin4
