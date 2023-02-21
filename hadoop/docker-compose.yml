@@ -57,7 +57,7 @@ services:
 networks: 
   default: 
     external: 
-      name: mlflow-hdfs-postgresql_postgres
+      name: mlflow-with-postgresql-hdfs_postgres
   
 volumes:
   hadoop_namenode:
