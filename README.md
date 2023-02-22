@@ -1,5 +1,7 @@
 # Mlflow With PostgreSQL and HDFS (on Docker)
 
+<b>! Hadoop should be installed on locally because pyarrow needs to some hadoop file!. </br></b>
+
 Database = PostgreSQL (on Docker) </br>
 Artifact Store = HDFS (Hadoop Distributed File System) (on Docker) </br>
 
