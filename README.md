@@ -12,4 +12,4 @@ How to run PostgreSQL and MLflow </br>
 
 How to run HDFS </br>
 * "./hadoop/ docker compose up" </br>
-  * localhost:9000 for HDFS
+  * localhost:9870 for HDFS
